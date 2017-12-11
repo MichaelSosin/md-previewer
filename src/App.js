@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
-import './App.css'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar'
+import MdViewerContainer from './containers/MdViewerContainer'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        
-      </div>
+      <MuiThemeProvider>
+        <div className="App">
+          <AppBar title='Markdown Previewer' />
+          <MdViewerContainer />
+        </div>
+      </MuiThemeProvider>
     )
   }
 }
